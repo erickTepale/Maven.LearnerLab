@@ -3,18 +3,19 @@ package io.zipcoder.interfaces;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
+import java.util.Objects;
 import java.util.function.Consumer;
 
-public class People implements Iterable<Person>{
-    List<Person> personList = new ArrayList<Person>();
+public abstract class People<E extends Person> implements Iterable<Person>{
+    private List<Person> personList = new ArrayList<Person>();
 
-    public void add(Person a){
-        personList.add(a);
+    public void add(Object E){
+        personList.add((Person) E);
     }
 
-    public Person findById(Long id){
+    public Person findById(Object E){
         for (Person person : personList) {
-            if (person.getId().equals(id))
+            if (person.getId().equals(E))
                 return person;
         }
 
@@ -58,9 +59,11 @@ public class People implements Iterable<Person>{
         return personList.size();
     }
 
-    public Person[] toArray(){
-        return (Person[])personList.toArray();
-    }
+    public abstract E[] toArray();
+
+//    public E[] toArray(){
+//        return (E[])personList.toArray();
+//    }
 
     @Override
     public Iterator iterator() {

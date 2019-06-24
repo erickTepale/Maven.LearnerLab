@@ -1,5 +1,5 @@
 # Leon's Lengthy Learner Lab 
-* **Objective** - to implement a `ZipCodeWilmington` class which _mediates_ a _composite_ `Students` and `Instructors` _singleton_ reference.
+* **Objective** - to implement a `io.zipcoder.interfaces.ZipCodeWilmington` class which _mediates_ a _composite_ `Students` and `Instructors` _singleton_ reference.
 * **Purpose** - to demonstrate the use of
 	* [interfaces](https://stackoverflow.com/questions/1321122/what-is-an-interface-in-java)
 	* [abstract classes](https://stackoverflow.com/questions/1320745/abstract-class-in-java)
@@ -132,13 +132,13 @@
 -
 ### Part 8.0 - Create and Test `Instructors` singleton
 * Use `Part 7` as a reference.
-* Create a `Instructors` singleton which represents the set of instructors at ZipCodeWilmington.
+* Create a `Instructors` singleton which represents the set of instructors at io.zipcoder.interfaces.ZipCodeWilmington.
 * Create a `TestInstructors` class.
 
 
 -
-### Part 9.1 - Create `ZipCodeWilmington` Class
-* Create a `ZipCodeWilmington` singleton.
+### Part 9.1 - Create `io.zipcoder.interfaces.ZipCodeWilmington` Class
+* Create a `io.zipcoder.interfaces.ZipCodeWilmington` singleton.
 	* The class should declare a field that references the instance of `Students` called `students`.
 	* The class should declare a field that references the instance of `Instructors` called `instructors`.
 	* The class should define a method `hostLecture` which makes use of a `Teacher teacher, double numberOfHours` parameter to host a `lecture` to the composite `personList` field in the `students` reference.
@@ -146,7 +146,7 @@
 	* The class should define a method `getStudyMap` which returns a <u>new instance</u> of a _mapping_ from `Student` objects to `Double` objects, representative of each respective student's `totalStudyTime`.
 
 -
-### Part 9.0 - Test `ZipCodeWilmington`
+### Part 9.0 - Test `io.zipcoder.interfaces.ZipCodeWilmington`
 * Create a `TestZipCodeWilmington` class.
 	* Create a `testHostLecture` method which ensures that each of the `Student`'s `totalStudyTime` instance variable is incremented by the specified `numberOfHours` upon invoking the `hostLecture` method.
 
@@ -181,8 +181,8 @@
 * Provide concrete implementations of the `getArray` method in each of these classes.
 
 -
-### Part 10.3 - Refactor `ZipCodeWilmington` class
-* Refactor the `hostLecture` method in the `ZipCodeWilmington` class by removing any intermediate _casting trick(s)_.
+### Part 10.3 - Refactor `io.zipcoder.interfaces.ZipCodeWilmington` class
+* Refactor the `hostLecture` method in the `io.zipcoder.interfaces.ZipCodeWilmington` class by removing any intermediate _casting trick(s)_.
 
 -
 ### Part 10.0 - Test refactored classes.
@@ -212,5 +212,5 @@
 
 
 -
-### Part 12.0 - Test `ZipCodeWilmington`
+### Part 12.0 - Test `io.zipcoder.interfaces.ZipCodeWilmington`
 * Ensure the `hostLecture` method can handle objects of type `Educator`.
